@@ -98,7 +98,7 @@ class NeuralNet {
     mutate(mutationRate) {
         var tempNet = _.cloneDeep(this)
 
-        tempNet.mapWeights(function (weight) {
+        tempNet.mapValues(function (weight) {
             return weight += (Math.floor(Math.random() * Math.floor(mutationRate * 2)) - mutationRate) / 100
         })
 
